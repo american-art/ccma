@@ -18,6 +18,11 @@ Literal Type: `xsd:string`
 <br/>Language: ``
 <br/>isUri: `false`
 
+#### Literal Node: `aat:300379842`
+Literal Type: `xsd:string`
+<br/>Language: ``
+<br/>isUri: `false`
+
 
 ## PyTransforms
 #### _man_made_object_uri_
@@ -107,15 +112,19 @@ return getValue("URL")
 | _Disp_Obj_Type_ | `rdfs:label` | `crm:E55_Type2`|
 | _Disp_Title_ | `crm:P2_has_type` | `crm:E35_Title1`|
 | _Disp_Title_URI_ | `uri` | `crm:E35_Title1`|
+| _Display_Name_ | `rdf:value` | `crm:E82_Actor_Appellation3`|
 | _Display_dimension_uri_ | `uri` | `crm:E33_Linguistic_Object1`|
+| _End_Date_Disp_ | `rdfs:label` | `crm:E52_Time-Span3`|
+| _First_Name_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
 | _ImagePath_ | `rdfs:label` | `crm:E38_Image1`|
+| _Last_Name_ | `rdf:value` | `crm:E82_Actor_Appellation2`|
 | _Medium_ | `skos:prefLabel` | `crm:E57_Material2`|
 | _MediumURI_ | `uri` | `crm:E57_Material1`|
+| _Nat_Culture_L2_ | `rdfs:label` | `crm:E74_Group2`|
+| _Start_Date_Disp_ | `rdfs:label` | `crm:E52_Time-Span2`|
 | _URL_ | `rdfs:label` | `foaf:Document1`|
-| _Values_ | `rdfs:label` | `crm:E39_Actor1`|
 | __Disp_End_Date_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | __Disp_Start_Dat_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
-| _artist_uri_ | `uri` | `crm:E39_Actor1`|
 | _disp_access_no_uri_ | `uri` | `crm:E42_Identifier1`|
 | _disp_create_date_uri_ | `uri` | `crm:E52_Time-Span1`|
 | _disp_obj_type_uri_ | `uri` | `crm:E55_Type2`|
@@ -141,5 +150,15 @@ return getValue("URL")
 | `crm:E22_Man-Made_Object1` | `crm:P45_consists_of` | `crm:E57_Material2`|
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `xsd:aat:300266036`|
+| `crm:E39_Actor1` | `crm:P92i_was_brought_into_existence_by` | `crm:E63_Beginning_of_Existence1`|
+| `crm:E39_Actor1` | `crm:P93i_was_taken_out_of_existence_by` | `crm:E64_End_of_Existence1`|
+| `crm:E39_Actor1` | `crm:P107i_is_current_or_former_member_of` | `crm:E74_Group2`|
+| `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E82_Actor_Appellation4`|
 | `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:aat:300312355`|
+| `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
+| `crm:E64_End_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span3`|
 | `crm:E74_Group1` | `crm:P2_has_type` | `xsd:aat:300263534`|
+| `crm:E74_Group2` | `crm:P2_has_type` | `xsd:aat:300379842`|
+| `crm:E82_Actor_Appellation4` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation1`|
+| `crm:E82_Actor_Appellation4` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation2`|
+| `crm:E82_Actor_Appellation4` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation3`|
