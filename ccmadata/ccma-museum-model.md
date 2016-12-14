@@ -97,6 +97,42 @@ From column: _objects / URL_
 return getValue("URL")
 ```
 
+#### _fnam_uri_
+From column: _artists / First_Name_
+``` python
+return UM.uri_from_fields("thesauri/first_name/",getValue("First_Name"))
+```
+
+#### _lname_uri_
+From column: _artists / Last_Name_
+``` python
+return UM.uri_from_fields("thesauri/last_name/",getValue("Last_Name"))
+```
+
+#### _display_name_uri_
+From column: _artists / Display_Name_
+``` python
+return UM.uri_from_fields("thesauri/display_name/",getValue("Display_Name"))
+```
+
+#### _nationality_uri_
+From column: _artists / Nat_Culture_L2_
+``` python
+return  UM.uri_from_fields("thesauri/nationality/",getValue("Nat_Culture_L2"))
+```
+
+#### _start_date_uri_
+From column: _artists / Start_Date_Disp_
+``` python
+return "artist/"+ getValue("_Artist_ID")+"/start_date/"+getValue("Start_Date_Disp")
+```
+
+#### _end_date_uri_
+From column: _artists / End_Date_Disp_
+``` python
+return "artist/"+ getValue("_Artist_ID")+"/end_date/"+getValue("End_Date_Disp")
+```
+
 
 ## Selections
 
@@ -128,8 +164,14 @@ return getValue("URL")
 | _disp_access_no_uri_ | `uri` | `crm:E42_Identifier1`|
 | _disp_create_date_uri_ | `uri` | `crm:E52_Time-Span1`|
 | _disp_obj_type_uri_ | `uri` | `crm:E55_Type2`|
+| _display_name_uri_ | `uri` | `crm:E82_Actor_Appellation3`|
+| _end_date_uri_ | `uri` | `crm:E52_Time-Span3`|
+| _fnam_uri_ | `uri` | `crm:E82_Actor_Appellation1`|
 | _imagepath_uri_ | `uri` | `crm:E38_Image1`|
+| _lname_uri_ | `uri` | `crm:E82_Actor_Appellation2`|
+| _nationality_uri_ | `uri` | `crm:E74_Group2`|
 | _row_uri_ | `uri` | `crm:E22_Man-Made_Object1`|
+| _start_date_uri_ | `uri` | `crm:E52_Time-Span2`|
 | _url_uri_ | `uri` | `foaf:Document1`|
 
 
