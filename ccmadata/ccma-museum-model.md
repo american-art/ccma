@@ -34,7 +34,7 @@ return getValue("Style")
 #### _Display_dimension_uri_
 From column: _objects / Disp_Dimen_
 ``` python
-return getValue("row_uri")+"/"+getValue("Disp_Dimen")
+return UM.uri_from_fields(getValue("row_uri")+"/",getValue("Disp_Dimen"))
 ```
 
 #### _MediumURI_
@@ -64,13 +64,13 @@ return "object/"+getValue("embark_ID")
 #### _disp_access_no_uri_
 From column: _objects / Disp_Access_No_
 ``` python
-return getValue("row_uri")+"/"+getValue("Disp_Access_No")
+return UM.uri_from_fields(getValue("row_uri")+"/",getValue("Disp_Access_No"))
 ```
 
 #### _disp_create_date_uri_
 From column: _objects / Disp_Create_DT_
 ``` python
-return getValue("row_uri")+"/"+getValue("Disp_Create_DT")
+return UM.uri_from_fields(getValue("row_uri")+"/",getValue("Disp_Create_DT"))
 ```
 
 #### _disp_obj_type_uri_
@@ -124,13 +124,15 @@ return  UM.uri_from_fields("thesauri/nationality/",getValue("Nat_Culture_L2"))
 #### _start_date_uri_
 From column: _artists / Start_Date_Disp_
 ``` python
-return "artist/"+ getValue("_Artist_ID")+"/start_date/"+getValue("Start_Date_Disp")
+return UM.uri_from_fields("artist/"+ getValue("_Artist_ID")+"/end_date/"
+,getValue("Start_Date_Disp"))
 ```
 
 #### _end_date_uri_
 From column: _artists / End_Date_Disp_
 ``` python
-return "artist/"+ getValue("_Artist_ID")+"/end_date/"+getValue("End_Date_Disp")
+return UM.uri_from_fields("artist/"+ getValue("_Artist_ID")+"/end_date/"
+,getValue("End_Date_Disp"))
 ```
 
 
