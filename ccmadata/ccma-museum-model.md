@@ -75,7 +75,7 @@ return getValue("row_uri")+"/"+"dimension_string"
 #### _MediumURI_
 From column: _objects / Disp_Medium_
 ``` python
-return UM.uri_from_fields("thesauri/medium/",getValue("Disp_Medium"))
+return getValue("row_uri") + '/medium/'
 ```
 
 #### _Disp_Title_URI_
@@ -203,7 +203,7 @@ return UM.uri_from_fields("thesauri/display_name/",getValue("Display_Name"))
 #### _display_main_duplicate_
 From column: _artists / display_name_uri_duplicate_
 ``` python
-return UM.uri_from_fields("artist/uri/",getValue("Display_Name"))
+return getValue("Display_Name")
 ```
 
 #### _physical_object_uri_
