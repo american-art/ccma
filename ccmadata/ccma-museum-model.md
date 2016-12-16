@@ -203,7 +203,7 @@ return UM.uri_from_fields("thesauri/display_name/",getValue("Display_Name"))
 #### _display_main_duplicate_
 From column: _artists / display_name_uri_duplicate_
 ``` python
-return UM.uri_from_fields("thesauri/display_name/",getValue("Display_Name"))
+return UM.uri_from_fields("artist/uri/",getValue("Display_Name"))
 ```
 
 #### _physical_object_uri_
@@ -237,6 +237,30 @@ From column: _artists / display_name_duplicate_
 return UM.uri_from_fields("artist/uri/",getValue("Display_Name"))
 ```
 
+#### _end_existance_uri_
+From column: _artists / end_date_uri_
+``` python
+return getValue("artist_name_uri") + "/end_existance"
+```
+
+#### _begining_existance_uri_
+From column: _artists / start_date_uri_
+``` python
+return getValue("artist_name_uri") + "/begining_existance"
+```
+
+#### _type1_uri_
+From column: _artists / fnam_uri_
+``` python
+return UM.uri_from_fields("thesauri/first_name/",getValue("First_Name"))
+```
+
+#### _type2_uri_
+From column: _artists / lname_uri_
+``` python
+return UM.uri_from_fields("thesauri/last_name/",getValue("Last_Name"))
+```
+
 
 ## Selections
 
@@ -267,6 +291,7 @@ return UM.uri_from_fields("artist/uri/",getValue("Display_Name"))
 | __Disp_Start_Dat_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _accession_duplicate_ | `rdf:value` | `crm:E42_Identifier1`|
 | _artist_name_uri_ | `uri` | `crm:E39_Actor1`|
+| _begining_existance_uri_ | `uri` | `crm:E63_Beginning_of_Existence1`|
 | _collection_name_ | `rdfs:label` | `crm:E19_Physical_Object1`|
 | _disp_access_no_uri_ | `uri` | `crm:E42_Identifier1`|
 | _disp_create_date_uri_ | `uri` | `crm:E52_Time-Span1`|
@@ -278,6 +303,7 @@ return UM.uri_from_fields("artist/uri/",getValue("Display_Name"))
 | _display_name_uri_ | `uri` | `crm:E82_Actor_Appellation3`|
 | _display_name_uri_duplicate_ | `uri` | `crm:E82_Actor_Appellation4`|
 | _end_date_uri_ | `uri` | `crm:E52_Time-Span3`|
+| _end_existance_uri_ | `uri` | `crm:E64_End_of_Existence1`|
 | _fnam_uri_ | `uri` | `crm:E82_Actor_Appellation1`|
 | _imagepath_uri_ | `uri` | `crm:E38_Image1`|
 | _lname_uri_ | `uri` | `crm:E82_Actor_Appellation2`|
@@ -287,6 +313,8 @@ return UM.uri_from_fields("artist/uri/",getValue("Display_Name"))
 | _row_uri_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _start_date_uri_ | `uri` | `crm:E52_Time-Span2`|
 | _temp_artist_uri_ | `uri` | `crm:E39_Actor2`|
+| _type1_uri_ | `uri` | `crm:E55_Type1`|
+| _type2_uri_ | `uri` | `crm:E55_Type3`|
 | _url_uri_ | `uri` | `foaf:Document1`|
 
 
