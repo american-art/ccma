@@ -23,6 +23,41 @@ Literal Type: `xsd:string`
 <br/>Language: ``
 <br/>isUri: `false`
 
+#### Literal Node: `http://vocab.getty.edu/aat/300266036`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
+#### Literal Node: `http://vocab.getty.edu/aat/300263534`
+Literal Type: `xsd:string`
+<br/>Language: ``
+<br/>isUri: `false`
+
+#### Literal Node: `http://vocab.getty.edu/aat/300312355`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
+#### Literal Node: `http://vocab.getty.edu/aat/300379842`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
+#### Literal Node: `http://vocab.getty.edu/aat/300404670`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
+#### Literal Node: `http://vocab.getty.edu/aat/300404651`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
+#### Literal Node: `http://vocab.getty.edu/aat/300404652`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _man_made_object_uri_
@@ -34,7 +69,7 @@ return getValue("Style")
 #### _Display_dimension_uri_
 From column: _objects / Disp_Dimen_
 ``` python
-return UM.uri_from_fields(getValue("row_uri")+"/",getValue("Disp_Dimen"))
+return getValue("row_uri")+"/"+"dimension_string"
 ```
 
 #### _MediumURI_
@@ -135,6 +170,42 @@ return UM.uri_from_fields("artist/"+ getValue("_Artist_ID")+"/end_date/"
 ,getValue("End_Date_Disp"))
 ```
 
+#### _collection_name_
+From column: _objects / Department_
+``` python
+return getValue("Department")
+```
+
+#### _accession_duplicate_
+From column: _objects / Disp_Access_No_
+``` python
+return getValue("Disp_Access_No")
+```
+
+#### _display_date_duplicate_
+From column: _objects / Disp_Title_
+``` python
+return getValue("Disp_Title")
+```
+
+#### _display_name_duplicate_
+From column: _artists / Display_Name_
+``` python
+return getValue("Display_Name")
+```
+
+#### _display_name_uri_duplicate_
+From column: _artists / display_name_uri_
+``` python
+return UM.uri_from_fields("thesauri/display_name/",getValue("Display_Name"))
+```
+
+#### _display_main_duplicate_
+From column: _artists / display_name_uri_duplicate_
+``` python
+return UM.uri_from_fields("thesauri/display_name/",getValue("Display_Name"))
+```
+
 
 ## Selections
 
@@ -148,7 +219,7 @@ return UM.uri_from_fields("artist/"+ getValue("_Artist_ID")+"/end_date/"
 | _Disp_Dimen_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _Disp_Medium_ | `skos:prefLabel` | `crm:E57_Material1`|
 | _Disp_Obj_Type_ | `rdfs:label` | `crm:E55_Type2`|
-| _Disp_Title_ | `crm:P2_has_type` | `crm:E35_Title1`|
+| _Disp_Title_ | `rdf:value` | `crm:E35_Title1`|
 | _Disp_Title_URI_ | `uri` | `crm:E35_Title1`|
 | _Display_Name_ | `rdf:value` | `crm:E82_Actor_Appellation3`|
 | _Display_dimension_uri_ | `uri` | `crm:E33_Linguistic_Object1`|
@@ -163,10 +234,16 @@ return UM.uri_from_fields("artist/"+ getValue("_Artist_ID")+"/end_date/"
 | _URL_ | `rdfs:label` | `foaf:Document1`|
 | __Disp_End_Date_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | __Disp_Start_Dat_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
+| _accession_duplicate_ | `rdf:value` | `crm:E42_Identifier1`|
+| _collection_name_ | `rdfs:label` | `crm:E19_Physical_Object1`|
 | _disp_access_no_uri_ | `uri` | `crm:E42_Identifier1`|
 | _disp_create_date_uri_ | `uri` | `crm:E52_Time-Span1`|
 | _disp_obj_type_uri_ | `uri` | `crm:E55_Type2`|
+| _display_date_duplicate_ | `rdfs:label` | `crm:E22_Man-Made_Object1`|
+| _display_main_duplicate_ | `rdfs:label` | `crm:E39_Actor1`|
+| _display_name_duplicate_ | `rdf:value` | `crm:E82_Actor_Appellation4`|
 | _display_name_uri_ | `uri` | `crm:E82_Actor_Appellation3`|
+| _display_name_uri_duplicate_ | `uri` | `crm:E82_Actor_Appellation4`|
 | _end_date_uri_ | `uri` | `crm:E52_Time-Span3`|
 | _fnam_uri_ | `uri` | `crm:E82_Actor_Appellation1`|
 | _imagepath_uri_ | `uri` | `crm:E38_Image1`|
@@ -193,16 +270,22 @@ return UM.uri_from_fields("artist/"+ getValue("_Artist_ID")+"/end_date/"
 | `crm:E22_Man-Made_Object1` | `crm:P45_consists_of` | `crm:E57_Material1`|
 | `crm:E22_Man-Made_Object1` | `crm:P45_consists_of` | `crm:E57_Material2`|
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
-| `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `xsd:aat:300266036`|
+| `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300266036`|
+| `crm:E35_Title1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
 | `crm:E39_Actor1` | `crm:P92i_was_brought_into_existence_by` | `crm:E63_Beginning_of_Existence1`|
 | `crm:E39_Actor1` | `crm:P93i_was_taken_out_of_existence_by` | `crm:E64_End_of_Existence1`|
 | `crm:E39_Actor1` | `crm:P107i_is_current_or_former_member_of` | `crm:E74_Group2`|
 | `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E82_Actor_Appellation4`|
-| `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:aat:300312355`|
+| `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300312355`|
+| `crm:E55_Type1` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404651`|
+| `crm:E55_Type3` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404652`|
 | `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
 | `crm:E64_End_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span3`|
-| `crm:E74_Group1` | `crm:P2_has_type` | `xsd:aat:300263534`|
-| `crm:E74_Group2` | `crm:P2_has_type` | `xsd:aat:300379842`|
+| `crm:E74_Group1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300263534`|
+| `crm:E74_Group2` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300379842`|
+| `crm:E82_Actor_Appellation1` | `crm:P2_has_type` | `crm:E55_Type1`|
+| `crm:E82_Actor_Appellation2` | `crm:P2_has_type` | `crm:E55_Type3`|
 | `crm:E82_Actor_Appellation4` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation1`|
 | `crm:E82_Actor_Appellation4` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation2`|
 | `crm:E82_Actor_Appellation4` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation3`|
+| `crm:E82_Actor_Appellation4` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
