@@ -75,7 +75,8 @@ return getValue("row_uri")+"/"+"dimension_string"
 #### _MediumURI_
 From column: _objects / Disp_Medium_
 ``` python
-return getValue("row_uri") + '/medium/'
+return UM.uri_from_fields(getValue("row_uri") +"/", getValue("Disp_Medium"))+ '/medium/'
+
 ```
 
 #### _Disp_Title_URI_
@@ -240,13 +241,13 @@ return UM.uri_from_fields("artist/uri/",getValue("Display_Name"))
 #### _end_existance_uri_
 From column: _artists / end_date_uri_
 ``` python
-return getValue("artist_name_uri") + "/end_existance"
+return "artist/"+ getValue("_Artist_ID")+"/end_existance"
 ```
 
 #### _begining_existance_uri_
 From column: _artists / start_date_uri_
 ``` python
-return getValue("artist_name_uri") + "/begining_existance"
+return "artist/"+ getValue("_Artist_ID")+"/begin_existance"
 ```
 
 #### _type1_uri_
@@ -259,6 +260,12 @@ return UM.uri_from_fields("thesauri/first_name/",getValue("First_Name"))
 From column: _artists / lname_uri_
 ``` python
 return UM.uri_from_fields("thesauri/last_name/",getValue("Last_Name"))
+```
+
+#### _display_applel_value_
+From column: _artists / display_main_duplicate_
+``` python
+return getValue("Display_Name")
 ```
 
 
@@ -276,7 +283,6 @@ return UM.uri_from_fields("thesauri/last_name/",getValue("Last_Name"))
 | _Disp_Obj_Type_ | `rdfs:label` | `crm:E55_Type2`|
 | _Disp_Title_ | `rdf:value` | `crm:E35_Title1`|
 | _Disp_Title_URI_ | `uri` | `crm:E35_Title1`|
-| _Display_Name_ | `rdf:value` | `crm:E82_Actor_Appellation3`|
 | _Display_dimension_uri_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _End_Date_Disp_ | `rdfs:label` | `crm:E52_Time-Span3`|
 | _First_Name_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
@@ -296,11 +302,10 @@ return UM.uri_from_fields("thesauri/last_name/",getValue("Last_Name"))
 | _disp_access_no_uri_ | `uri` | `crm:E42_Identifier1`|
 | _disp_create_date_uri_ | `uri` | `crm:E52_Time-Span1`|
 | _disp_obj_type_uri_ | `uri` | `crm:E55_Type2`|
+| _display_applel_value_ | `rdf:value` | `crm:E82_Actor_Appellation4`|
 | _display_aritst_mmo_ | `rdfs:label` | `crm:E39_Actor2`|
 | _display_date_duplicate_ | `rdfs:label` | `crm:E22_Man-Made_Object1`|
 | _display_main_duplicate_ | `rdfs:label` | `crm:E39_Actor1`|
-| _display_name_duplicate_ | `rdf:value` | `crm:E82_Actor_Appellation4`|
-| _display_name_uri_ | `uri` | `crm:E82_Actor_Appellation3`|
 | _display_name_uri_duplicate_ | `uri` | `crm:E82_Actor_Appellation4`|
 | _end_date_uri_ | `uri` | `crm:E52_Time-Span3`|
 | _end_existance_uri_ | `uri` | `crm:E64_End_of_Existence1`|
@@ -351,5 +356,4 @@ return UM.uri_from_fields("thesauri/last_name/",getValue("Last_Name"))
 | `crm:E82_Actor_Appellation2` | `crm:P2_has_type` | `crm:E55_Type3`|
 | `crm:E82_Actor_Appellation4` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
 | `crm:E82_Actor_Appellation4` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation1`|
-| `crm:E82_Actor_Appellation4` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation3`|
 | `crm:E82_Actor_Appellation4` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation2`|
