@@ -75,7 +75,8 @@ return getValue("row_uri")+"/"+"dimension_string"
 #### _MediumURI_
 From column: _objects / Disp_Medium_
 ``` python
-return UM.uri_from_fields("thesauri/medium/",getValue("Disp_Medium"))
+return UM.uri_from_fields(getValue("row_uri") +"/", getValue("Disp_Medium"))+ '/medium/'
+
 ```
 
 #### _Disp_Title_URI_
@@ -267,36 +268,6 @@ From column: _artists / display_main_duplicate_
 return getValue("Display_Name")
 ```
 
-#### _accession_duplicate_2_
-From column: _objects / accession_duplicate_
-``` python
-return getValue("Disp_Access_No")
-```
-
-#### _time_span2_1_
-From column: _artists / Start_Date_Disp_
-``` python
-return getValue("Start_Date_Disp")
-```
-
-#### _time_span2_2_
-From column: _artists / time_span2_1_
-``` python
-return getValue("Start_Date_Disp")
-```
-
-#### _time_span_3_1_
-From column: _artists / End_Date_Disp_
-``` python
-return getValue("End_Date_Disp")
-```
-
-#### _time_span_3_2_
-From column: _artists / time_span_3_1_
-``` python
-return getValue("End_Date_Disp")
-```
-
 
 ## Selections
 
@@ -347,10 +318,6 @@ return getValue("End_Date_Disp")
 | _row_uri_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _start_date_uri_ | `uri` | `crm:E52_Time-Span2`|
 | _temp_artist_uri_ | `uri` | `crm:E39_Actor2`|
-| _time_span2_1_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
-| _time_span2_2_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span2`|
-| _time_span_3_1_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span3`|
-| _time_span_3_2_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span3`|
 | _type1_uri_ | `uri` | `crm:E55_Type1`|
 | _type2_uri_ | `uri` | `crm:E55_Type3`|
 | _url_uri_ | `uri` | `foaf:Document1`|
@@ -375,11 +342,10 @@ return getValue("End_Date_Disp")
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300266036`|
 | `crm:E35_Title1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
 | `crm:E39_Actor1` | `crm:P92i_was_brought_into_existence_by` | `crm:E63_Beginning_of_Existence1`|
-| `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E82_Actor_Appellation4`|
-| `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E82_Actor_Appellation3`|
 | `crm:E39_Actor1` | `crm:P93i_was_taken_out_of_existence_by` | `crm:E64_End_of_Existence1`|
 | `crm:E39_Actor1` | `crm:P107i_is_current_or_former_member_of` | `crm:E74_Group2`|
-| `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
+| `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation4`|
+| `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300312355`|
 | `crm:E55_Type1` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404651`|
 | `crm:E55_Type3` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404652`|
 | `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
@@ -388,6 +354,6 @@ return getValue("End_Date_Disp")
 | `crm:E74_Group2` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300379842`|
 | `crm:E82_Actor_Appellation1` | `crm:P2_has_type` | `crm:E55_Type1`|
 | `crm:E82_Actor_Appellation2` | `crm:P2_has_type` | `crm:E55_Type3`|
-| `crm:E82_Actor_Appellation3` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation2`|
-| `crm:E82_Actor_Appellation3` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation1`|
 | `crm:E82_Actor_Appellation4` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
+| `crm:E82_Actor_Appellation4` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation1`|
+| `crm:E82_Actor_Appellation4` | `crm:P106_is_composed_of` | `crm:E82_Actor_Appellation2`|
