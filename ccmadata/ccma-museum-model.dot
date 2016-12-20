@@ -84,6 +84,10 @@ n78[shape="plaintext",style="filled",fillcolor="gold",label="start_date_uri"];
 n79[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300312355"];
 n80[shape="plaintext",style="filled",fillcolor="gold",label="_Disp_End_Date"];
 n81[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300266036"];
+n82[style="filled",color="white",fillcolor="lightgray",label="E33_Linguistic_Object2"];
+n83[shape="plaintext",style="filled",fillcolor="gold",label="Dedication"];
+n84[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300026687"];
+n85[shape="plaintext",style="filled",fillcolor="gold",label="dedication_uri"];
 }
 n2 -> n3[color="brown",fontcolor="black",label="classLink"]
 n4 -> n5[color="brown",fontcolor="black",label="classLink"]
@@ -124,6 +128,7 @@ n6 -> n51[color="brown",fontcolor="black",label="label"]
 n6 -> n43[color="brown",fontcolor="black",label="P1_is_identified_by"]
 n22 -> n52[color="brown",fontcolor="black",label="classLink"]
 n7 -> n53[color="brown",fontcolor="black",label="classLink"]
+n14 -> n16[color="brown",fontcolor="black",label="P131_is_identified_by"]
 n43 -> n54[color="brown",fontcolor="black",label="classLink"]
 n16 -> n12[color="brown",fontcolor="black",label="P106_is_composed_of"]
 n38 -> n55[color="brown",fontcolor="black",label="classLink"]
@@ -162,5 +167,8 @@ n56 -> n78[color="brown",fontcolor="black",label="classLink"]
 n43 -> n79[color="brown",fontcolor="black",label="P2_has_type"]
 n18 -> n80[color="brown",fontcolor="black",label="P82b_end_of_the_end"]
 n25 -> n81[color="brown",fontcolor="black",label="P2_has_type"]
-n14 -> n16[color="brown",fontcolor="black",label="P131_is_identified_by"]
+n82 -> n83[color="brown",fontcolor="black",label="value"]
+n82 -> n84[color="brown",fontcolor="black",label="P2_has_type"]
+n6 -> n82[color="brown",fontcolor="black",label="P67i_is_referred_to_by"]
+n82 -> n85[color="brown",fontcolor="black",label="classLink"]
 }
