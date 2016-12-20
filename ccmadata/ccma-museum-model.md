@@ -279,6 +279,30 @@ From column: _objects / Dedication_
 return UM.uri_from_fields("thesauri/department/",getValue("Dedication"))
 ```
 
+#### _end_beg_
+From column: _artists / End_Date_Disp_
+``` python
+return getValue("End_Date_Disp")
+```
+
+#### _end_end_
+From column: _artists / end_beg_
+``` python
+return getValue("End_Date_Disp")
+```
+
+#### _start_beg_
+From column: _artists / Start_Date_Disp_
+``` python
+return getValue("Start_Date_Disp")
+```
+
+#### _start_end_
+From column: _artists / start_beg_
+``` python
+return getValue("Start_Date_Disp")
+```
+
 
 ## Selections
 
@@ -320,7 +344,9 @@ return UM.uri_from_fields("thesauri/department/",getValue("Dedication"))
 | _display_date_duplicate_ | `rdfs:label` | `crm:E22_Man-Made_Object1`|
 | _display_main_duplicate_ | `rdfs:label` | `crm:E39_Actor1`|
 | _display_name_uri_duplicate_ | `uri` | `crm:E82_Actor_Appellation4`|
+| _end_beg_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span3`|
 | _end_date_uri_ | `uri` | `crm:E52_Time-Span3`|
+| _end_end_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span3`|
 | _end_existance_uri_ | `uri` | `crm:E64_End_of_Existence1`|
 | _fnam_uri_ | `uri` | `crm:E82_Actor_Appellation1`|
 | _imagepath_uri_ | `uri` | `crm:E38_Image1`|
@@ -329,7 +355,9 @@ return UM.uri_from_fields("thesauri/department/",getValue("Dedication"))
 | _physical_object_uri_ | `uri` | `crm:E19_Physical_Object1`|
 | _production_uri_ | `uri` | `crm:E12_Production1`|
 | _row_uri_ | `uri` | `crm:E22_Man-Made_Object1`|
+| _start_beg_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
 | _start_date_uri_ | `uri` | `crm:E52_Time-Span2`|
+| _start_end_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span2`|
 | _temp_artist_uri_ | `uri` | `crm:E39_Actor2`|
 | _type1_uri_ | `uri` | `crm:E55_Type1`|
 | _type2_uri_ | `uri` | `crm:E55_Type3`|
@@ -360,7 +388,7 @@ return UM.uri_from_fields("thesauri/department/",getValue("Dedication"))
 | `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation4`|
 | `crm:E39_Actor1` | `crm:P93i_was_taken_out_of_existence_by` | `crm:E64_End_of_Existence1`|
 | `crm:E39_Actor1` | `crm:P107i_is_current_or_former_member_of` | `crm:E74_Group2`|
-| `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300312355`|
+| `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
 | `crm:E55_Type1` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404651`|
 | `crm:E55_Type3` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404652`|
 | `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
