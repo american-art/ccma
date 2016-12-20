@@ -58,6 +58,11 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `http://vocab.getty.edu/aat/300026687`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _man_made_object_uri_
@@ -268,12 +273,19 @@ From column: _artists / display_main_duplicate_
 return getValue("Display_Name")
 ```
 
+#### _dedication_uri_
+From column: _objects / Dedication_
+``` python
+return UM.uri_from_fields("thesauri/department/",getValue("Dedication"))
+```
+
 
 ## Selections
 
 ## Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
+| _Dedication_ | `rdf:value` | `crm:E33_Linguistic_Object2`|
 | _Department_ | `rdfs:label` | `crm:E74_Group1`|
 | _Department_URI_ | `uri` | `crm:E74_Group1`|
 | _Disp_Access_No_ | `rdfs:label` | `crm:E42_Identifier1`|
@@ -299,6 +311,7 @@ return getValue("Display_Name")
 | _artist_name_uri_ | `uri` | `crm:E39_Actor1`|
 | _begining_existance_uri_ | `uri` | `crm:E63_Beginning_of_Existence1`|
 | _collection_name_ | `rdfs:label` | `crm:E19_Physical_Object1`|
+| _dedication_uri_ | `uri` | `crm:E33_Linguistic_Object2`|
 | _disp_access_no_uri_ | `uri` | `crm:E42_Identifier1`|
 | _disp_create_date_uri_ | `uri` | `crm:E52_Time-Span1`|
 | _disp_obj_type_uri_ | `uri` | `crm:E55_Type2`|
@@ -339,12 +352,14 @@ return getValue("Display_Name")
 | `crm:E22_Man-Made_Object1` | `crm:P102_has_title` | `crm:E35_Title1`|
 | `crm:E22_Man-Made_Object1` | `crm:P46i_forms_part_of` | `crm:E19_Physical_Object1`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object1`|
+| `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object2`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300266036`|
+| `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300026687`|
 | `crm:E35_Title1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300404670`|
 | `crm:E39_Actor1` | `crm:P92i_was_brought_into_existence_by` | `crm:E63_Beginning_of_Existence1`|
+| `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation4`|
 | `crm:E39_Actor1` | `crm:P93i_was_taken_out_of_existence_by` | `crm:E64_End_of_Existence1`|
 | `crm:E39_Actor1` | `crm:P107i_is_current_or_former_member_of` | `crm:E74_Group2`|
-| `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation4`|
 | `crm:E42_Identifier1` | `crm:P2_has_type` | `xsd:http://vocab.getty.edu/aat/300312355`|
 | `crm:E55_Type1` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404651`|
 | `crm:E55_Type3` | `skos:broadMatch` | `xsd:http://vocab.getty.edu/aat/300404652`|
