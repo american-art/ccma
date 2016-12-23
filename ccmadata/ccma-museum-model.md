@@ -165,7 +165,7 @@ return  UM.uri_from_fields("thesauri/nationality/",getValue("Nat_Culture_L2"))
 #### _start_date_uri_
 From column: _artists / Start_Date_Disp_
 ``` python
-return UM.uri_from_fields("artist/"+ getValue("_Artist_ID")+"/end_date/"
+return UM.uri_from_fields("artist/"+ getValue("_Artist_ID")+"/begin_date/"
 ,getValue("Start_Date_Disp"))
 ```
 
@@ -322,11 +322,11 @@ return getValue("Start_Date_Disp")
 | _Display_dimension_uri_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _End_Date_Disp_ | `rdfs:label` | `crm:E52_Time-Span3`|
 | _First_Name_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
-| _ImagePath_ | `rdfs:label` | `crm:E38_Image1`|
 | _Last_Name_ | `rdf:value` | `crm:E82_Actor_Appellation2`|
 | _Medium_ | `skos:prefLabel` | `crm:E57_Material2`|
 | _MediumURI_ | `uri` | `crm:E57_Material1`|
 | _Nat_Culture_L2_ | `rdfs:label` | `crm:E74_Group2`|
+| _Remarks_ | `rdfs:label` | `crm:E38_Image1`|
 | _Start_Date_Disp_ | `rdfs:label` | `crm:E52_Time-Span2`|
 | _URL_ | `rdfs:label` | `foaf:Document1`|
 | __Disp_End_Date_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
