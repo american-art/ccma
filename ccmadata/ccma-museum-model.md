@@ -135,7 +135,7 @@ return getValue("ImagePath")
 #### _url_uri_
 From column: _objects / URL_
 ``` python
-return getValue("URL")
+return getValue("row_uri")+"/url"
 ```
 
 #### _fnam_uri_
