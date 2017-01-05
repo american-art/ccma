@@ -129,7 +129,7 @@ return UM.uri_from_fields("thesauri/artist/",getValue("Values"))
 #### _imagepath_uri_
 From column: _objects / Images / ImagePath_
 ``` python
-return getValue("ImagePath")
+return getValue("row_uri")+"/"+getValue("ImagePath")
 ```
 
 #### _url_uri_
