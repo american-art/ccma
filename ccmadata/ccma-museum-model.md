@@ -80,8 +80,7 @@ return getValue("row_uri")+"/"+"dimension_string"
 #### _MediumURI_
 From column: _objects / Disp_Medium_
 ``` python
-return UM.uri_from_fields(getValue("row_uri") +"/", getValue("Disp_Medium"))+ '/medium/'
-
+return UM.uri_from_fields("thesauri/medium/",getValue("Disp_Medium"))
 ```
 
 #### _Disp_Title_URI_
