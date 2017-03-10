@@ -18,6 +18,11 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `http://vocab.getty.edu/ulan/500311505`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ObjectURI_
@@ -182,3 +187,4 @@ return "Colby College Museum of Art"
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300266036`|
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300264237`|
 | `crm:E35_Title1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
+| `crm:E40_Legal_Body1` | `skos:exactMatch` | `http://vocab.getty.edu/ulan/500311505`|
