@@ -43,7 +43,10 @@ Literal Type: ``
 #### _ConstituentURI_
 From column: __Artist_ID_
 ``` python
-return "constituent/"+getValue("_Artist_ID")
+if getValue("_Artist_ID"):
+    return "constituent/"+getValue("_Artist_ID")
+else:
+    ""
 ```
 
 #### _NameLabel_
