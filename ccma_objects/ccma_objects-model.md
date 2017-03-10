@@ -136,6 +136,18 @@ From column: _objects / OwnerURI_
 return "Colby College Museum of Art"
 ```
 
+#### _PhyObjURI_
+From column: _objects / Period_
+``` python
+return getValue("ObjectURI")+"/physical_object"
+```
+
+#### _DepartmentURI_
+From column: _objects / PhyObjURI_
+``` python
+return UM.uri_from_fields("thesauri/department/",getValue("Department"))
+```
+
 
 ## Selections
 
@@ -144,6 +156,8 @@ return "Colby College Museum of Art"
 |  ----- | -------- | ----- |
 | _Alt_Title_ | `rdf:value` | `crm:E35_Title2`|
 | _AlternateTitleURI_ | `uri` | `crm:E35_Title2`|
+| _Department_ | `rdfs:label` | `crm:E74_Group1`|
+| _DepartmentURI_ | `uri` | `crm:E74_Group1`|
 | _DimensionStringURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _Disp_Create_DT_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _Disp_Dimen_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
@@ -157,6 +171,7 @@ return "Colby College Museum of Art"
 | _ObjectURI_ | `uri` | `crm:E22_Man-Made_Object1`|
 | _OwnerLabel_ | `rdfs:label` | `crm:E40_Legal_Body1`|
 | _OwnerURI_ | `uri` | `crm:E40_Legal_Body1`|
+| _PhyObjURI_ | `uri` | `crm:E19_Physical_Object1`|
 | _ProductionURI_ | `uri` | `crm:E12_Production1`|
 | _TimeSpanURI_ | `uri` | `crm:E52_Time-Span1`|
 | _TitleLabel_ | `rdfs:label` | `crm:E22_Man-Made_Object1`|
@@ -174,8 +189,10 @@ return "Colby College Museum of Art"
 |  --- | -------- | ---|
 | `crm:E12_Production1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E17_Type_Assignment1` | `crm:P42_assigned` | `crm:E55_Type1`|
+| `crm:E19_Physical_Object1` | `crm:P49_has_former_or_current_keeper` | `crm:E74_Group1`|
 | `crm:E22_Man-Made_Object1` | `crm:P108i_was_produced_by` | `crm:E12_Production1`|
 | `crm:E22_Man-Made_Object1` | `crm:P41i_was_classified_by` | `crm:E17_Type_Assignment1`|
+| `crm:E22_Man-Made_Object1` | `crm:P46i_forms_part_of` | `crm:E19_Physical_Object1`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object1`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object2`|
 | `crm:E22_Man-Made_Object1` | `crm:P102_has_title` | `crm:E35_Title1`|
