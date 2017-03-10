@@ -23,6 +23,11 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `http://vocab.getty.edu/aat/300263534`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ObjectURI_
@@ -127,7 +132,7 @@ return getValue("URL")
 #### _OwnerURI_
 From column: _objects / ObjectURI_
 ``` python
-return "data.americanartcollaborative.org/ccma"
+return "http://data.americanartcollaborative.org/ccma"
 ```
 
 #### _OwnerLabel_
@@ -205,3 +210,4 @@ return UM.uri_from_fields("thesauri/department/",getValue("Department"))
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300264237`|
 | `crm:E35_Title1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E40_Legal_Body1` | `skos:exactMatch` | `http://vocab.getty.edu/ulan/500311505`|
+| `crm:E74_Group1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300263534`|
