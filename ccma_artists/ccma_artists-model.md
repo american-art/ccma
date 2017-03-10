@@ -199,6 +199,21 @@ else:
     return ""
 ```
 
+#### _IdentifierLabel_
+From column: __Artist_ID_
+``` python
+return getValue("_Artist_ID")
+```
+
+#### _IdentifierURI_
+From column: _IdentifierLabel_
+``` python
+if getValue("_Artist_ID"):
+    return getValue("ConstituentURI")+"/preferred_id"
+else:
+    return ""
+```
+
 
 ## Selections
 
@@ -221,6 +236,8 @@ else:
 | _FirstNameTypeURI_ | `uri` | `crm:E55_Type1`|
 | _FirstNameURI_ | `uri` | `crm:E82_Actor_Appellation4`|
 | _First_Name_ | `rdf:value` | `crm:E82_Actor_Appellation4`|
+| _IdentifierLabel_ | `rdfs:label` | `crm:E42_Identifier1`|
+| _IdentifierURI_ | `uri` | `crm:E42_Identifier1`|
 | _LastNameTypeURI_ | `uri` | `crm:E55_Type2`|
 | _LastNameURI_ | `uri` | `crm:E82_Actor_Appellation5`|
 | _Last_Name_ | `rdf:value` | `crm:E82_Actor_Appellation5`|
@@ -233,6 +250,7 @@ else:
 | _Sort_Name_ | `rdf:value` | `crm:E82_Actor_Appellation2`|
 | _Start_Date_Disp_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
 | _UlanURI_ | `uri` | `skos:Concept1`|
+| __Artist_ID_ | `rdf:value` | `crm:E42_Identifier1`|
 
 
 ## Links
@@ -241,6 +259,7 @@ else:
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300080102`|
 | `crm:E39_Actor1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object1`|
+| `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E39_Actor1` | `crm:P92i_was_brought_into_existence_by` | `crm:E63_Beginning_of_Existence1`|
 | `crm:E39_Actor1` | `crm:P93i_was_taken_out_of_existence_by` | `crm:E64_End_of_Existence1`|
 | `crm:E39_Actor1` | `crm:P107i_is_current_or_former_member_of` | `crm:E74_Group1`|
@@ -249,6 +268,7 @@ else:
 | `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation3`|
 | `crm:E39_Actor1` | `skos:exactMatch` | `skos:Concept1`|
 | `crm:E39_Actor1` | `crm:P131_is_identified_by` | `crm:E82_Actor_Appellation1`|
+| `crm:E42_Identifier1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E55_Type1` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404651`|
 | `crm:E55_Type2` | `skos:broadMatch` | `http://vocab.getty.edu/aat/300404652`|
 | `crm:E63_Beginning_of_Existence1` | `crm:P4_has_time-span` | `crm:E52_Time-Span2`|
