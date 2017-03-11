@@ -28,6 +28,11 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `http://data.americanartcollaborative.org/ccma`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ObjectURI_
@@ -169,7 +174,7 @@ return UM.uri_from_fields("thesauri/department/",getValue("Department"))
 | _Disp_Medium_ | `rdf:value` | `crm:E33_Linguistic_Object2`|
 | _Disp_Obj_Type_ | `rdfs:label` | `crm:E55_Type1`|
 | _Disp_Title_ | `rdf:value` | `crm:E35_Title1`|
-| _IIIF_URL_ | `uri` | `crm:E38_Image1`|
+| _ImagePath_ | `uri` | `crm:E38_Image1`|
 | _Medium_ | `skos:prefLabel` | `crm:E57_Material1`|
 | _MediumTextURI_ | `uri` | `crm:E33_Linguistic_Object2`|
 | _MediumURI_ | `uri` | `crm:E57_Material1`|
@@ -211,3 +216,4 @@ return UM.uri_from_fields("thesauri/department/",getValue("Department"))
 | `crm:E35_Title1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E40_Legal_Body1` | `skos:exactMatch` | `http://vocab.getty.edu/ulan/500311505`|
 | `crm:E74_Group1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300263534`|
+| `crm:E74_Group1` | `crm:P107i_is_current_or_former_member_of` | `http://data.americanartcollaborative.org/ccma`|
