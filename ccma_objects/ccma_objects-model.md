@@ -231,5 +231,6 @@ return getValue("embark_ID")
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300264237`|
 | `crm:E35_Title1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E40_Legal_Body1` | `skos:exactMatch` | `http://vocab.getty.edu/ulan/500311505`|
+| `crm:E42_Identifier1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E74_Group1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300263534`|
 | `crm:E74_Group1` | `crm:P107i_is_current_or_former_member_of` | `http://data.americanartcollaborative.org/ccma`|
