@@ -55,8 +55,9 @@ n49[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.get
 n50[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300263534"];
 n51[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300264237"];
 n52[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
-n53[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://data.americanartcollaborative.org/ccma"];
-n54[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300266036"];
+n53[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300404670"];
+n54[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://data.americanartcollaborative.org/ccma"];
+n55[shape="plaintext",style="filled",fillcolor="#CC7799",label="http://vocab.getty.edu/aat/300266036"];
 }
 n2 -> n3[color="brown",fontcolor="black",label="P4_has_time-span"]
 n4 -> n5[color="brown",fontcolor="black",label="P42_assigned"]
@@ -107,7 +108,8 @@ n11 -> n48[color="brown",fontcolor="black",label="classLink"]
 n14 -> n49[color="brown",fontcolor="black",label="exactMatch"]
 n7 -> n50[color="brown",fontcolor="black",label="P2_has_type"]
 n10 -> n51[color="brown",fontcolor="black",label="P2_has_type"]
-n11 -> n52[color="brown",fontcolor="black",label="P2_has_type"]
-n7 -> n53[color="brown",fontcolor="black",label="P107i_is_current_or_former_member_of"]
-n9 -> n54[color="brown",fontcolor="black",label="P2_has_type"]
+n15 -> n52[color="brown",fontcolor="black",label="P2_has_type"]
+n11 -> n53[color="brown",fontcolor="black",label="P2_has_type"]
+n7 -> n54[color="brown",fontcolor="black",label="P107i_is_current_or_former_member_of"]
+n9 -> n55[color="brown",fontcolor="black",label="P2_has_type"]
 }
