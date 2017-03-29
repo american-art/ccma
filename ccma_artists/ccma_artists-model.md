@@ -91,8 +91,8 @@ return getValue("ConstituentURI")+"/sort_name"
 #### _NameCompositionURI_
 From column: _artists / Sort_Name_
 ``` python
-if getValue("First_Name") or getValue("First_Name"):
-    return getValue("ConstituentURI")+"/name_composition"
+if getValue("First_Name") or getValue("Last_Name"):
+    return getValue("ConstituentURI")+"/name"
 else:
     return ""
 ```
@@ -246,8 +246,8 @@ else:
 ## Links
 | From | Property | To |
 |  --- | -------- | ---|
-| `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300080102`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
+| `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300080102`|
 | `crm:E39_Actor1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object1`|
 | `crm:E39_Actor1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E39_Actor1` | `crm:P92i_was_brought_into_existence_by` | `crm:E63_Beginning_of_Existence1`|
