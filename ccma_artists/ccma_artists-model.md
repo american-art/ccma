@@ -205,6 +205,12 @@ else:
     return ""
 ```
 
+#### _DisplayNameLabel_
+From column: _artists / Display_Name_
+``` python
+return getValue("Display_Name")
+```
+
 
 ## Selections
 
@@ -221,6 +227,7 @@ else:
 | _DeathURI_ | `uri` | `crm:E64_End_of_Existence1`|
 | _Disp_Maker_Life_ | `rdfs:label` | `crm:E52_Time-Span2`|
 | _DisplayDateCopy_ | `rdfs:label` | `crm:E52_Time-Span1`|
+| _DisplayNameLabel_ | `rdfs:label` | `crm:E82_Actor_Appellation1`|
 | _Display_Name_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
 | _End_Date_Disp_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
 | _FirstNameTypeURI_ | `uri` | `crm:E55_Type1`|
