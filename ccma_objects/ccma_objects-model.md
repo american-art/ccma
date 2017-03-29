@@ -158,6 +158,18 @@ From column: _objects / PhyObjURI_
 return UM.uri_from_fields("thesauri/department/",getValue("Department"))
 ```
 
+#### _PrefIdURI_
+From column: _objects / embark_ID_
+``` python
+return getValue("ObjectURI")+"/pref_id"
+```
+
+#### _ID_Label_
+From column: _objects / embark_ID_
+``` python
+return getValue("embark_ID")
+```
+
 
 ## Selections
 
@@ -174,6 +186,7 @@ return UM.uri_from_fields("thesauri/department/",getValue("Department"))
 | _Disp_Medium_ | `rdf:value` | `crm:E33_Linguistic_Object2`|
 | _Disp_Obj_Type_ | `rdfs:label` | `crm:E55_Type1`|
 | _Disp_Title_ | `rdf:value` | `crm:E35_Title1`|
+| _ID_Label_ | `rdfs:label` | `crm:E42_Identifier1`|
 | _ImagePath_ | `uri` | `crm:E38_Image1`|
 | _Medium_ | `skos:prefLabel` | `crm:E57_Material1`|
 | _MediumTextURI_ | `uri` | `crm:E33_Linguistic_Object2`|
@@ -182,6 +195,7 @@ return UM.uri_from_fields("thesauri/department/",getValue("Department"))
 | _OwnerLabel_ | `rdfs:label` | `crm:E40_Legal_Body1`|
 | _OwnerURI_ | `uri` | `crm:E40_Legal_Body1`|
 | _PhyObjURI_ | `uri` | `crm:E19_Physical_Object1`|
+| _PrefIdURI_ | `uri` | `crm:E42_Identifier1`|
 | _ProductionURI_ | `uri` | `crm:E12_Production1`|
 | _TimeSpanURI_ | `uri` | `crm:E52_Time-Span1`|
 | _TitleLabel_ | `rdfs:label` | `crm:E22_Man-Made_Object1`|
@@ -192,6 +206,7 @@ return UM.uri_from_fields("thesauri/department/",getValue("Department"))
 | _URLLabel_ | `rdfs:label` | `foaf:Document1`|
 | __Disp_End_Date_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | __Disp_Start_Dat_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
+| _embark_ID_ | `rdf:value` | `crm:E42_Identifier1`|
 
 
 ## Links
@@ -209,6 +224,7 @@ return UM.uri_from_fields("thesauri/department/",getValue("Department"))
 | `crm:E22_Man-Made_Object1` | `crm:P102_has_title` | `crm:E35_Title2`|
 | `crm:E22_Man-Made_Object1` | `crm:P138i_has_representation` | `crm:E38_Image1`|
 | `crm:E22_Man-Made_Object1` | `crm:P52_has_current_owner` | `crm:E40_Legal_Body1`|
+| `crm:E22_Man-Made_Object1` | `crm:P1_is_identified_by` | `crm:E42_Identifier1`|
 | `crm:E22_Man-Made_Object1` | `crm:P45_consists_of` | `crm:E57_Material1`|
 | `crm:E22_Man-Made_Object1` | `foaf:homepage` | `foaf:Document1`|
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300266036`|
