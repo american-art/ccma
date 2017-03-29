@@ -241,6 +241,7 @@ else:
 | _StartDateEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | _Start_Date_Disp_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _UlanURI_ | `uri` | `skos:Concept1`|
+| __Artist_ID_ | `rdf:value` | `crm:E42_Identifier1`|
 
 
 ## Links
