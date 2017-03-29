@@ -170,6 +170,12 @@ From column: _objects / embark_ID_
 return getValue("embark_ID")
 ```
 
+#### _ConstituentURI_
+From column: _objects / _Artist_ID_
+``` python
+return "constituent/"+getValue("_Artist_ID")
+```
+
 
 ## Selections
 
@@ -204,6 +210,7 @@ return getValue("embark_ID")
 | _TypeURI_ | `uri` | `crm:E55_Type1`|
 | _URL_ | `uri` | `foaf:Document1`|
 | _URLLabel_ | `rdfs:label` | `foaf:Document1`|
+| __Artist_ID_ | `uri` | `crm:E39_Actor1`|
 | __Disp_End_Date_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | __Disp_Start_Dat_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _embark_ID_ | `rdf:value` | `crm:E42_Identifier1`|
@@ -212,6 +219,7 @@ return getValue("embark_ID")
 ## Links
 | From | Property | To |
 |  --- | -------- | ---|
+| `crm:E12_Production1` | `crm:P108i_was_produced_by` | `crm:E39_Actor1`|
 | `crm:E12_Production1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E17_Type_Assignment1` | `crm:P42_assigned` | `crm:E55_Type1`|
 | `crm:E19_Physical_Object1` | `crm:P49_has_former_or_current_keeper` | `crm:E74_Group1`|
