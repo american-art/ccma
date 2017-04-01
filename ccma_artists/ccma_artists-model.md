@@ -172,13 +172,19 @@ else:
 #### _StartDateEnd_
 From column: _artists / Start_Date_Disp_
 ``` python
-return getValue("Start_Date_Disp")
+if getValue("Start_Date_Disp"):
+    return "12-31-" + getValue("Start_Date_Disp")
+else:
+    return ""
 ```
 
 #### _DeathDateEnd_
 From column: _artists / End_Date_Disp_
 ``` python
-return getValue("End_Date_Disp")
+if getValue("End_Date_Disp"):
+    return "12-31-" + getValue("End_Date_Disp")
+else:
+    return ""
 ```
 
 #### _DisplayDateCopy_
@@ -211,6 +217,24 @@ From column: _artists / Display_Name_
 return getValue("Display_Name")
 ```
 
+#### _StartDateBegin_
+From column: _artists / Start_Date_Disp_
+``` python
+if getValue("Start_Date_Disp"):
+    return "01-01-" + getValue("Start_Date_Disp")
+else:
+    return ""
+```
+
+#### _DeathDateStart_
+From column: _artists / End_Date_Disp_
+``` python
+if getValue("End_Date_Disp"):
+    return "01-01-" + getValue("End_Date_Disp")
+else:
+    return ""
+```
+
 
 ## Selections
 
@@ -223,13 +247,13 @@ return getValue("Display_Name")
 | _BirthURI_ | `uri` | `crm:E63_Beginning_of_Existence1`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
 | _DeathDateEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span2`|
+| _DeathDateStart_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
 | _DeathDateURI_ | `uri` | `crm:E52_Time-Span2`|
 | _DeathURI_ | `uri` | `crm:E64_End_of_Existence1`|
 | _Disp_Maker_Life_ | `rdfs:label` | `crm:E52_Time-Span2`|
 | _DisplayDateCopy_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _DisplayNameLabel_ | `rdfs:label` | `crm:E82_Actor_Appellation1`|
 | _Display_Name_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
-| _End_Date_Disp_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
 | _FirstNameTypeURI_ | `uri` | `crm:E55_Type1`|
 | _FirstNameURI_ | `uri` | `crm:E82_Actor_Appellation4`|
 | _First_Name_ | `rdf:value` | `crm:E82_Actor_Appellation4`|
@@ -245,8 +269,8 @@ return getValue("Display_Name")
 | _NationalityURI_ | `uri` | `crm:E74_Group1`|
 | _SortNameURI_ | `uri` | `crm:E82_Actor_Appellation2`|
 | _Sort_Name_ | `rdf:value` | `crm:E82_Actor_Appellation2`|
+| _StartDateBegin_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _StartDateEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
-| _Start_Date_Disp_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _UlanURI_ | `uri` | `skos:Concept1`|
 | __Artist_ID_ | `rdf:value` | `crm:E42_Identifier1`|
 
