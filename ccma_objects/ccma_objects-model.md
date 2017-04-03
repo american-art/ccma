@@ -100,7 +100,7 @@ else:
 #### _ProductionURI_
 From column: _objects / Edition_
 ``` python
-if getValue("Disp_Create_DT"):
+if getValue("Disp_Create_DT") or getValue("_Artist_ID"):
     return getValue("ObjectURI")+"/production"
 else:
     return ""
