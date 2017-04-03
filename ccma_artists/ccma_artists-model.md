@@ -190,8 +190,8 @@ else:
 #### _DisplayDateCopy_
 From column: _artists / StartDateEnd_
 ``` python
-if getValue("StartDateBegin") or getValue("StartDateEnd"):
-    return getValue("StartDateBegin") + " to " + getValue("StartDateEnd")
+if getValue("StartDateBegin") or getValue("DeathDateEnd"):
+    return getValue("StartDateBegin") + " to " + getValue("DeathDateEnd")
 else:
     return ""
 ```
@@ -241,8 +241,8 @@ else:
 #### _DisplayDeath_
 From column: _artists / DeathDateEnd_
 ``` python
-if getValue("DeathDateStart") or getValue("DeathDateEnd"):
-    return getValue("DeathDateStart") + " to " + getValue("DeathDateEnd")
+if getValue("StartDateBegin") or getValue("DeathDateEnd"):
+    return getValue("StartDateBegin") + " to " + getValue("DeathDateEnd")
 else:
     return ""
 ```
