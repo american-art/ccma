@@ -190,7 +190,10 @@ else:
 #### _DisplayDateCopy_
 From column: _artists / StartDateEnd_
 ``` python
-return getValue("Disp_Maker_Life")
+if getValue("StartDateBegin") or getValue("StartDateEnd"):
+    return getValue("StartDateBegin") + " to " + getValue("StartDateEnd")
+else:
+    return ""
 ```
 
 #### _NationalityURI_
@@ -235,6 +238,15 @@ else:
     return ""
 ```
 
+#### _DisplayDeath_
+From column: _artists / DeathDateEnd_
+``` python
+if getValue("DeathDateStart") or getValue("DeathDateEnd"):
+    return getValue("DeathDateStart") + " to " + getValue("DeathDateEnd")
+else:
+    return ""
+```
+
 
 ## Selections
 
@@ -250,8 +262,8 @@ else:
 | _DeathDateStart_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
 | _DeathDateURI_ | `uri` | `crm:E52_Time-Span2`|
 | _DeathURI_ | `uri` | `crm:E64_End_of_Existence1`|
-| _Disp_Maker_Life_ | `rdfs:label` | `crm:E52_Time-Span2`|
 | _DisplayDateCopy_ | `rdfs:label` | `crm:E52_Time-Span1`|
+| _DisplayDeath_ | `rdfs:label` | `crm:E52_Time-Span2`|
 | _DisplayNameLabel_ | `rdfs:label` | `crm:E82_Actor_Appellation1`|
 | _Display_Name_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
 | _FirstNameTypeURI_ | `uri` | `crm:E55_Type1`|
