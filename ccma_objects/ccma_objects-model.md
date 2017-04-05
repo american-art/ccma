@@ -100,7 +100,7 @@ else:
 #### _ProductionURI_
 From column: _objects / Edition_
 ``` python
-if getValue("Disp_Create_DT") or getValue("_Artist_ID"):
+if getValue("_Disp_Start_Dat") or getValue("_Disp_End_Date") or getValue("_Artist_ID"):
     return getValue("ObjectURI")+"/production"
 else:
     return ""
@@ -109,7 +109,7 @@ else:
 #### _TimeSpanURI_
 From column: _objects / ProductionURI_
 ``` python
-if getValue("Disp_Create_DT"):
+if getValue("_Disp_Start_Dat") or getValue("_Disp_End_Date"):
     return getValue("ObjectURI")+"/production/timespan"
 else:
     return ""
@@ -220,7 +220,10 @@ else:
 #### _DateLabel_
 From column: _objects / Disp_Create_DT_
 ``` python
-return getValue("StartDateFormatted")+" to "+getValue("EndDateFormatted")
+if getValue("StartDateFormatted") or getValue("EndDateFormatted"):
+    return getValue("StartDateFormatted")+" to "+getValue("EndDateFormatted")
+else:
+    return ""
 ```
 
 #### _ImagePathSansComma_
