@@ -173,7 +173,7 @@ else:
 From column: _artists / Start_Date_Disp_
 ``` python
 if getValue("Start_Date_Disp"):
-    return "12-31-" + getValue("Start_Date_Disp")
+    return getValue("Start_Date_Disp") + "-12-31"
 else:
     return ""
 ```
@@ -182,7 +182,7 @@ else:
 From column: _artists / End_Date_Disp_
 ``` python
 if getValue("End_Date_Disp"):
-    return "12-31-" + getValue("End_Date_Disp")
+    return getValue("End_Date_Disp") + "-12-31"
 else:
     return ""
 ```
@@ -190,8 +190,8 @@ else:
 #### _DisplayDateCopy_
 From column: _artists / StartDateEnd_
 ``` python
-if getValue("StartDateBegin") or getValue("DeathDateEnd"):
-    return getValue("StartDateBegin") + " to " + getValue("DeathDateEnd")
+if getValue("StartDateBegin") or getValue("StartDateEnd"):
+    return getValue("StartDateBegin") + " to " + getValue("StartDateEnd")
 else:
     return ""
 ```
@@ -224,7 +224,7 @@ return getValue("Display_Name")
 From column: _artists / Start_Date_Disp_
 ``` python
 if getValue("Start_Date_Disp"):
-    return "01-01-" + getValue("Start_Date_Disp")
+    return getValue("Start_Date_Disp") + "-01-01"
 else:
     return ""
 ```
@@ -233,7 +233,7 @@ else:
 From column: _artists / End_Date_Disp_
 ``` python
 if getValue("End_Date_Disp"):
-    return "01-01-" + getValue("End_Date_Disp")
+    return getValue("End_Date_Disp") + "-01-01"
 else:
     return ""
 ```
@@ -241,8 +241,8 @@ else:
 #### _DisplayDeath_
 From column: _artists / DeathDateEnd_
 ``` python
-if getValue("StartDateBegin") or getValue("DeathDateEnd"):
-    return getValue("StartDateBegin") + " to " + getValue("DeathDateEnd")
+if getValue("DeathDateStart") or getValue("DeathDateEnd"):
+    return getValue("DeathDateStart") + " to " + getValue("DeathDateEnd")
 else:
     return ""
 ```
