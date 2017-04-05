@@ -203,7 +203,7 @@ return getValue("Medium").strip().lower()
 From column: _objects / _Disp_Start_Dat_
 ``` python
 if getValue("_Disp_Start_Dat"):
-    return "01-01-" + getValue("_Disp_Start_Dat")
+    return getValue("_Disp_Start_Dat") + "-01-01"
 else:
     return ""
 ```
@@ -212,7 +212,7 @@ else:
 From column: _objects / _Disp_End_Date_
 ``` python
 if getValue("_Disp_End_Date"):
-    return "12-31-" + getValue("_Disp_End_Date")
+    return getValue("_Disp_End_Date") + "-12-31"
 else:
     return ""
 ```
@@ -223,13 +223,17 @@ From column: _objects / Disp_Create_DT_
 return getValue("StartDateFormatted")+" to "+getValue("EndDateFormatted")
 ```
 
-#### _ImagePathEscaped_
+#### _ImagePathSansComma_
 From column: _objects / Images / ImagePath_
 ``` python
-path = getValue("ImagePath")
-path = path.split(",")
-path = "\,".join(path)
-return path
+if getValue("ImagePath"):
+    path = getValue("ImagePath")
+    path = path.split("/")
+    path[-3] = "full"
+    path = "/".join(path)
+    return path
+else:
+    return ""
 ```
 
 
@@ -254,7 +258,7 @@ return path
 | _Disp_Title_ | `rdf:value` | `crm:E35_Title1`|
 | _EndDateFormatted_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
 | _ID_Label_ | `rdfs:label` | `crm:E42_Identifier1`|
-| _ImagePath_ | `uri` | `crm:E38_Image1`|
+| _ImagePathSansComma_ | `uri` | `crm:E38_Image1`|
 | _MediumTextURI_ | `uri` | `crm:E33_Linguistic_Object2`|
 | _MediumURI_ | `uri` | `crm:E57_Material1`|
 | _Medium_clean_ | `skos:prefLabel` | `crm:E57_Material1`|
