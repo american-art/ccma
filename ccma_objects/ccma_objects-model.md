@@ -50,7 +50,7 @@ return "object/"+getValue("embark_ID")
 From column: _objects / Obj_Title_
 ``` python
 if getValue("Disp_Title")!="Untitled":
-    return UM.uri_from_fields("thesauri/title/",getValue("Disp_Title"))
+    return UM.uri_from_fields(getValue("ObjectURI")+"/title/",getValue("Disp_Title"))
 else:
     return ""
 ```
