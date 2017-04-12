@@ -285,7 +285,7 @@ else:
 ## Links
 | From | Property | To |
 |  --- | -------- | ---|
-| `crm:E12_Production1` | `crm:P108i_was_produced_by` | `crm:E39_Actor1`|
+| `crm:E12_Production1` | `crm:P14_carried_out_by` | `crm:E39_Actor1`|
 | `crm:E12_Production1` | `crm:P4_has_time-span` | `crm:E52_Time-Span1`|
 | `crm:E17_Type_Assignment1` | `crm:P42_assigned` | `crm:E55_Type1`|
 | `crm:E17_Type_Assignment1` | `crm:P21_had_general_purpose` | `http://vocab.getty.edu/aat/300179869`|
