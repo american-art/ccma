@@ -253,6 +253,7 @@ else:
 ## Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
+| _Artist_Code_ | `rdfs:label` | `skos:Concept1`|
 | _Biography_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _BiographyURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _BirthDateURI_ | `uri` | `crm:E52_Time-Span1`|
