@@ -253,7 +253,6 @@ else:
 ## Semantic Types
 | Column | Property | Class |
 |  ----- | -------- | ----- |
-| _Artist_Code_ | `rdfs:label` | `skos:Concept1`|
 | _Biography_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _BiographyURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _BirthDateURI_ | `uri` | `crm:E52_Time-Span1`|
@@ -263,10 +262,9 @@ else:
 | _DeathDateStart_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span2`|
 | _DeathDateURI_ | `uri` | `crm:E52_Time-Span2`|
 | _DeathURI_ | `uri` | `crm:E64_End_of_Existence1`|
-| _DisplayDateCopy_ | `rdfs:label` | `crm:E52_Time-Span1`|
-| _DisplayDeath_ | `rdfs:label` | `crm:E52_Time-Span2`|
 | _DisplayNameLabel_ | `rdfs:label` | `crm:E82_Actor_Appellation1`|
 | _Display_Name_ | `rdf:value` | `crm:E82_Actor_Appellation1`|
+| _End_Date_Disp_ | `rdfs:label` | `crm:E52_Time-Span2`|
 | _FirstNameTypeURI_ | `uri` | `crm:E55_Type1`|
 | _FirstNameURI_ | `uri` | `crm:E82_Actor_Appellation4`|
 | _First_Name_ | `rdf:value` | `crm:E82_Actor_Appellation4`|
@@ -284,6 +282,7 @@ else:
 | _Sort_Name_ | `rdf:value` | `crm:E82_Actor_Appellation2`|
 | _StartDateBegin_ | `crm:P82a_begin_of_the_begin` | `crm:E52_Time-Span1`|
 | _StartDateEnd_ | `crm:P82b_end_of_the_end` | `crm:E52_Time-Span1`|
+| _Start_Date_Disp_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _UlanURI_ | `uri` | `skos:Concept1`|
 | __Artist_ID_ | `rdf:value` | `crm:E42_Identifier1`|
 
