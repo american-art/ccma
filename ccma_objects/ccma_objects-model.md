@@ -237,7 +237,8 @@ From column: _objects / Images / ImagePath_
 if getValue("ImagePath"):
     path = getValue("ImagePath")
     path = path.split("/")
-    path[-3] = "full"
+    #path[-3] = "full"
+    path[-3] = "512%2C"
     path = "/".join(path)
     return path
 else:
@@ -265,7 +266,6 @@ else:
 | _AlternateTitleURI_ | `uri` | `crm:E35_Title2`|
 | _ConstituentURI_ | `uri` | `crm:E39_Actor1`|
 | _CreditlineURI_ | `uri` | `crm:E33_Linguistic_Object3`|
-| _DateLabel_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _Dedication_ | `rdf:value` | `crm:E33_Linguistic_Object3`|
 | _Department_ | `rdfs:label` | `crm:E74_Group1`|
 | _DepartmentURI_ | `uri` | `crm:E74_Group1`|
@@ -295,6 +295,7 @@ else:
 | _TypeURI_ | `uri` | `crm:E55_Type1`|
 | _URL_ | `uri` | `foaf:Document1`|
 | _URLLabel_ | `rdfs:label` | `foaf:Document1`|
+| __Disp_Start_Dat_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _embark_ID_ | `rdf:value` | `crm:E42_Identifier1`|
 
 
