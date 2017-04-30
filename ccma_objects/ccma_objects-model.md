@@ -43,6 +43,11 @@ Literal Type: ``
 <br/>Language: ``
 <br/>isUri: `true`
 
+#### Literal Node: `http://vocab.getty.edu/aat/300080091`
+Literal Type: ``
+<br/>Language: ``
+<br/>isUri: `true`
+
 
 ## PyTransforms
 #### _ObjectURI_
@@ -236,10 +241,11 @@ From column: _objects / Images / ImagePath_
 ``` python
 if getValue("ImagePath"):
     path = getValue("ImagePath")
-    path = path.split("/")
+    #path = path.split("/")
     #path[-3] = "full"
-    path[-3] = "512%2C"
-    path = "/".join(path)
+    #path[-3] = "512%2C"
+    #path = "/".join(path)
+    path = path.replace(",","%2C")
     return path
 else:
     return ""
@@ -250,6 +256,15 @@ From column: _objects / Dedication_
 ``` python
 if getValue("Dedication"):
     return getValue("ObjectURI")+"/credit_line"
+else:
+    return ""
+```
+
+#### _DescriptionURI_
+From column: _objects / Description_
+``` python
+if getValue("Description"):
+    return getValue("ObjectURI")+"/description"
 else:
     return ""
 ```
@@ -269,6 +284,8 @@ else:
 | _Dedication_ | `rdf:value` | `crm:E33_Linguistic_Object3`|
 | _Department_ | `rdfs:label` | `crm:E74_Group1`|
 | _DepartmentURI_ | `uri` | `crm:E74_Group1`|
+| _Description_ | `uri` | `crm:E33_Linguistic_Object4`|
+| _DescriptionURI_ | `uri` | `crm:E33_Linguistic_Object4`|
 | _DimensionStringURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _Disp_Access_No_ | `rdf:value` | `crm:E42_Identifier2`|
 | _Disp_Dimen_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
@@ -313,6 +330,7 @@ else:
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object1`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object2`|
 | `crm:E22_Man-Made_Object1` | `crm:P67i_is_referred_to_by` | `crm:E33_Linguistic_Object3`|
+| `crm:E22_Man-Made_Object1` | `crm:P129i_is_subject_of` | `crm:E33_Linguistic_Object4`|
 | `crm:E22_Man-Made_Object1` | `crm:P102_has_title` | `crm:E35_Title1`|
 | `crm:E22_Man-Made_Object1` | `crm:P102_has_title` | `crm:E35_Title2`|
 | `crm:E22_Man-Made_Object1` | `crm:P138i_has_representation` | `crm:E38_Image1`|
@@ -324,6 +342,8 @@ else:
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300266036`|
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300264237`|
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300026687`|
+| `crm:E33_Linguistic_Object4` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
+| `crm:E33_Linguistic_Object4` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300080091`|
 | `crm:E35_Title1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E40_Legal_Body1` | `skos:exactMatch` | `http://vocab.getty.edu/ulan/500311505`|
 | `crm:E42_Identifier1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
