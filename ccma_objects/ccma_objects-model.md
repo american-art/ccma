@@ -213,7 +213,10 @@ return getValue("Medium").strip().lower()
 From column: _objects / _Disp_Start_Dat_
 ``` python
 if getValue("_Disp_Start_Dat"):
-    return getValue("_Disp_Start_Dat") + "-01-01"
+    if "BCE" in getValue("_Disp_Start_Dat"):
+        return "-"+getValue("_Disp_Start_Dat").split()[0].zfill(4)
+    else:
+        return getValue("_Disp_Start_Dat") + "-01-01"
 else:
     return ""
 ```
@@ -222,7 +225,10 @@ else:
 From column: _objects / _Disp_End_Date_
 ``` python
 if getValue("_Disp_End_Date"):
-    return getValue("_Disp_End_Date") + "-12-31"
+    if "BCE" in getValue("_Disp_End_Date"):
+        return "-"+getValue("_Disp_End_Date").split()[0].zfill(4)
+    else:
+        return getValue("_Disp_End_Date") + "-12-31"
 else:
     return ""
 ```
@@ -288,6 +294,7 @@ else:
 | _DescriptionURI_ | `uri` | `crm:E33_Linguistic_Object4`|
 | _DimensionStringURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _Disp_Access_No_ | `rdf:value` | `crm:E42_Identifier2`|
+| _Disp_Create_DT_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _Disp_Dimen_ | `rdf:value` | `crm:E33_Linguistic_Object1`|
 | _Disp_Medium_ | `rdf:value` | `crm:E33_Linguistic_Object2`|
 | _Disp_Obj_Type_ | `rdfs:label` | `crm:E55_Type1`|
@@ -312,7 +319,6 @@ else:
 | _TypeURI_ | `uri` | `crm:E55_Type1`|
 | _URL_ | `uri` | `foaf:Document1`|
 | _URLLabel_ | `rdfs:label` | `foaf:Document1`|
-| __Disp_Start_Dat_ | `rdfs:label` | `crm:E52_Time-Span1`|
 | _embark_ID_ | `rdf:value` | `crm:E42_Identifier1`|
 
 
