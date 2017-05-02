@@ -290,7 +290,7 @@ else:
 | _Dedication_ | `rdf:value` | `crm:E33_Linguistic_Object3`|
 | _Department_ | `rdfs:label` | `crm:E74_Group1`|
 | _DepartmentURI_ | `uri` | `crm:E74_Group1`|
-| _Description_ | `uri` | `crm:E33_Linguistic_Object4`|
+| _Description_ | `rdf:value` | `crm:E33_Linguistic_Object4`|
 | _DescriptionURI_ | `uri` | `crm:E33_Linguistic_Object4`|
 | _DimensionStringURI_ | `uri` | `crm:E33_Linguistic_Object1`|
 | _Disp_Access_No_ | `rdf:value` | `crm:E42_Identifier2`|
