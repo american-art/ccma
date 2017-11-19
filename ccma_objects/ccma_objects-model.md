@@ -152,7 +152,7 @@ return getValue("URL")
 #### _OwnerURI_
 From column: _objects / ObjectURI_
 ``` python
-return "http://data.americanartcollaborative.org/ccma"
+return "http://data.museum.colby.edu/aac"
 ```
 
 #### _OwnerLabel_
@@ -348,11 +348,11 @@ else:
 | `crm:E33_Linguistic_Object1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300266036`|
 | `crm:E33_Linguistic_Object2` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300264237`|
 | `crm:E33_Linguistic_Object3` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300026687`|
-| `crm:E33_Linguistic_Object4` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E33_Linguistic_Object4` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300080091`|
+| `crm:E33_Linguistic_Object4` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E35_Title1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E40_Legal_Body1` | `skos:exactMatch` | `http://vocab.getty.edu/ulan/500311505`|
 | `crm:E42_Identifier1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300404670`|
 | `crm:E42_Identifier2` | `crm:P2_has_type` | `crm:E55_Type2`|
-| `crm:E74_Group1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300263534`|
 | `crm:E74_Group1` | `crm:P107i_is_current_or_former_member_of` | `http://data.americanartcollaborative.org/ccma`|
+| `crm:E74_Group1` | `crm:P2_has_type` | `http://vocab.getty.edu/aat/300263534`|
